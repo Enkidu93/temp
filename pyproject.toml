@@ -3,11 +3,11 @@ name = "temp"
 version = "1.0.0"
 description = ""
 authors = ["SIL International"]
-
 [tool.poetry.dependencies]
 python = ">=3.8,<3.9"
 pandas = "^1.0.4"
 sentencepiece = "^0.1.97"
+nltk = "^3.5"
 python-dotenv = "0.20.0"
 seaborn = "0.11.2"
 morfessor = "^2.0.6"
@@ -17,6 +17,7 @@ scikit-learn = "1.1.2"
 numpy = "^1.23.1"
 OpenNMT-tf = "^2.31.0"
 lit-nlp = "0.4.1"
+tensorflow = "2.7.3"
 google-cloud-translate = "^3.0.2"
 scipy = "1.8"
 clearml = ">=1.4.1"
@@ -24,8 +25,10 @@ lxml = "^4.6.3"
 tqdm = "^4.62.2"
 s3path = "0.3.4"
 sacrebleu = "^2.3.1"
+tensorflow-addons = "0.17.1"
 sil-machine = {extras = ["thot"], version = "^1.0.2"}
 datasets = "^2.7.1"
+torch = {version = "2.1.2", source = "torch"}
 sacremoses = "^0.0.53"
 evaluate = "^0.3.0"
 python-docx = "^0.8.11"
@@ -60,3 +63,8 @@ deptry = "^0.16.1"
 
 [tool.poetry.extras]
 eflomal = ["eflomal"]
+
+[[tool.poetry.source]]
+name = "torch"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "explicit"
